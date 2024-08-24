@@ -23,7 +23,7 @@ export function BookSearcher({ className, ...props }: BookSearcherProps) {
                 )} />
             <button className={clsx(
                 "absolute grid place-items-center h-full right-0",
-                "text-white bg-green-300 w-10 rounded-r"
+                "text-gray-6 bg-green-300 w-10 rounded-r"
             )} >
                 <Search size={16} />
             </button>

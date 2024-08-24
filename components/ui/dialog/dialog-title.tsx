@@ -10,7 +10,7 @@ export const DialogTitle = forwardRef<
 >(({ className, children, ...rest }, ref) => ((
     <DialogPrimitive.Title
         ref={ref}
-        className={cn("text-base text-gray-1 font-[700]", className)}
+        className={cn("text-base text-gray-1 font-[700] text-balance", className)}
         {...rest}
     >
         {children}

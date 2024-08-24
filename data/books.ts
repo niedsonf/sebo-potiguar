@@ -11,6 +11,17 @@ import O_FIO_DA_NAVALHA from "@/assets/books/literarios/O_FIO_DA_NAVALHA.jpg";
 import O_LEOPARDO from "@/assets/books/literarios/O_LEOPARDO.jpg";
 import ROMEU_E_JULIETA from "@/assets/books/literarios/ROMEU_E_JULIETA.jpg";
 import VENTOS_UIVANTES from "@/assets/books/literarios/VENTOS_UIVANTES.jpg";
+import COMO_SER_UM_CONSERVADOR from "@/assets/books/nao-literarios/COMO_SER_UM_CONSERVADOR.jpg";
+import ENSINANDO_INTELIGENCIA from "@/assets/books/nao-literarios/ENSINANDO_INTELIGENCIA.jpg";
+import ESTIMULANDO_INTELIGENCIA from "@/assets/books/nao-literarios/ESTIMULANDO_INTELIGENCIA.jpg";
+import FE_E_LIBERDADE from "@/assets/books/nao-literarios/FE_E_LIBERDADE.jpg";
+import FILOSOFIA_DO_DIREITO from "@/assets/books/nao-literarios/FILOSOFIA_DO_DIREITO.jpg";
+import METODOLOGIA_DA_ECONOMIA from "@/assets/books/nao-literarios/METODOLOGIA_DA_ECONOMIA.jpg";
+import MISBEHAVING from "@/assets/books/nao-literarios/MISBEHAVING.jpg";
+import NOVA_ORDEM from "@/assets/books/nao-literarios/NOVA_ORDEM.jpg";
+import O_BRASIL_NA_FITA from "@/assets/books/nao-literarios/O_BRASIL_NA_FITA.jpg";
+import O_TEMPO_E_EU from "@/assets/books/nao-literarios/O_TEMPO_E_EU.jpg";
+import TEORIA_E_POLITICA from "@/assets/books/nao-literarios/TEORIA_E_POLITICA.jpg";
 
 export const Books: Book[] = [
     {
@@ -129,5 +140,105 @@ export const Books: Book[] = [
         genre: "Literário",
         rating: "Usado",
         seller: "Afonso",
-    }
+    },
+    {
+        id: 14,
+        image: COMO_SER_UM_CONSERVADOR,
+        title: "Como ser um conservador",
+        author: "Roger Scruton",
+        genre: "Não Literário",
+        rating: "Usado",
+        seller: "Afonso",
+    },
+    {
+        id: 15,
+        image: ENSINANDO_INTELIGENCIA,
+        title: "Ensinando Inteligência",
+        author: "Pierluigi Piazzi",
+        genre: "Não Literário",
+        rating: "Usado",
+        seller: "Afonso",
+    },
+    {
+        id: 16,
+        image: ESTIMULANDO_INTELIGENCIA,
+        title: "Estimulando Inteligência",
+        author: "Pierluigi Piazzi",
+        genre: "Não Literário",
+        rating: "Usado",
+        seller: "Afonso",
+    },
+    {
+        id: 17,
+        image: FE_E_LIBERDADE,
+        title: "Fé e Liberdade",
+        author: "Alejandro A. Chafuen",
+        genre: "Não Literário",
+        rating: "Usado",
+        seller: "Afonso",
+    },
+    {
+        id: 18,
+        image: FILOSOFIA_DO_DIREITO,
+        title: "Filosofia do Direito",
+        author: "Paulo Dourado de Gusmão",
+        genre: "Não Literário",
+        rating: "Usado",
+        seller: "Afonso",
+    },
+    {
+        id: 19,
+        image: METODOLOGIA_DA_ECONOMIA,
+        title: "Metodologia da Economia",
+        author: "Mark Blaug",
+        genre: "Não Literário",
+        rating: "Usado",
+        seller: "Afonso",
+    },
+    {
+        id: 20,
+        image: MISBEHAVING,
+        title: "MISBEHAVING",
+        author: "Richard H. Thaler",
+        genre: "Não Literário",
+        rating: "Usado",
+        seller: "Afonso",
+    },
+    {
+        id: 21,
+        image: NOVA_ORDEM,
+        title: "A Nova Ordem Internacional e a 3ª Revolução Industrial",
+        author: "",
+        genre: "Não Literário",
+        rating: "Usado",
+        seller: "Afonso",
+    },
+    {
+        id: 22,
+        image: O_BRASIL_NA_FITA,
+        title: "O Brasil na Fita",
+        author: "Ricardo Molina",
+        genre: "Não Literário",
+        rating: "Usado",
+        seller: "Afonso",
+    },
+    {
+        id: 23,
+        image: O_TEMPO_E_EU,
+        title: "O Tempo e Eu",
+        author: "Luís da Câmara Cascudo",
+        genre: "Não Literário",
+        rating: "Usado",
+        seller: "Afonso",
+    },
+    {
+        id: 24,
+        image: TEORIA_E_POLITICA,
+        title: "Teoria e política do desenvolvimento econômico",
+        author: "Celso Furtado",
+        genre: "Não Literário",
+        rating: "Usado",
+        seller: "Afonso",
+    },
+    
 ]

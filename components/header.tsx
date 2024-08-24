@@ -22,7 +22,7 @@ export function Header() {
             )}>
                 <SideMenuDialog
                     trigger={
-                        <button className="max-xl:flex hidden text-white">
+                        <button className="max-xl:flex hidden text-gray-6">
                             <Menu size={24} />
                         </button>
                     }
@@ -31,10 +31,10 @@ export function Header() {
                             <Logo />
                             <BookSearcher className="mx-auto" />
                             <div className="flex flex-col gap-2 opacity-50 pointer-events-none">
-                                <span className="text-xs text-white pl-1">Ou busque por tipo (Em breve...)</span>
+                                <span className="text-xs text-gray-6 pl-1">Ou busque por tipo (Em breve...)</span>
                                 <nav className={clsx(
                                     "flex flex-col h-full overflow-hidden",
-                                    "border border-white rounded",
+                                    "border border-gray-6 rounded",
                                     "[&_a:not(:last-child)]:border-b"
                                 )}>
                                     <Link href="" className="header-navigation-link">
@@ -57,10 +57,10 @@ export function Header() {
                 <div className="h-full w-[1px] bg-green-700 max-xl:hidden flex" />
                 <BookSearcher className="max-xl:hidden" />
                 <div className="flex flex-col gap-0.5 max-xl:hidden opacity-50 pointer-events-none">
-                    <span className="text-xs text-white pl-1">Ou busque por tipo (Em breve...)</span>
+                    <span className="text-xs text-gray-6 pl-1">Ou busque por tipo (Em breve...)</span>
                     <nav className={clsx(
                         "flex h-full overflow-hidden",
-                        "border border-white rounded",
+                        "border border-gray-6 rounded",
                         "[&_a:not(:last-child)]:border-r"
                     )}>
                         <Link href="" className="header-navigation-link">
@@ -81,7 +81,7 @@ export function Header() {
                                 products.length > 0 &&
                                 <span
                                     className={cn(
-                                        "text-white text-xs absolute -top-3.5 -right-3.5",
+                                        "text-gray-6 text-xs absolute -top-3.5 -right-3.5",
                                         "rounded-full bg-green-700 w-6 h-6",
                                         "grid place-items-center"
                                     )}>
@@ -94,7 +94,7 @@ export function Header() {
                     content={
                         <div className="flex flex-col gap-8 bg-green-500 p-6 w-96 max-xl:w-80 h-full overflow-y-auto">
                             <Logo />
-                            <div className="h-[1px] bg-white" />
+                            <div className="h-[1px] bg-gray-6" />
                             <div className="flex flex-col gap-3 pb-8">
                                 <h1 className="text-base font-[600]">Carrinho</h1>
                                 <div className="flex flex-col gap-2">
@@ -127,8 +127,8 @@ ${products.map(product => `*${product.title}*`).join("\n")}`
                                 }
                                 target="_blank"
                                 className={cn(
-                                    "rounded border border-white text-base py-1 text-center",
-                                    "hover:bg-white hover:text-green-500 transition-colors",
+                                    "rounded border border-gray-6 text-base py-1 text-center",
+                                    "hover:bg-gray-6 hover:text-green-500 transition-colors",
                                     "aria-[disabled=true]:hidden block"
                                 )}>
                                 Solicitar orçamento

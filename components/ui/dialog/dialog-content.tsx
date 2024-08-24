@@ -35,7 +35,7 @@ export const DialogContent = forwardRef<
                 onEscapeKeyDown={triggerDispose}
                 onPointerDownOutside={triggerDispose}
                 className={cn(
-                    "fixed inset-0 w-fit max-w-screen h-fit flex flex-col bg-gray-7 rounded-lg overflow-hidden z-50",
+                    "fixed inset-0 w-fit max-w-[95%] h-fit flex flex-col bg-gray-7 rounded-lg overflow-hidden z-50",
                     "shadow-[0_8px_6px_0_rgba(0,0,0,0.25)]",
                     position === "center" && "m-auto",
                     position === "left" && "mr-auto",
@@ -52,7 +52,7 @@ export const DialogContent = forwardRef<
                     onClick={triggerDispose}
                     className="absolute right-6 top-6 grid place-items-center"
                 >
-                    <X fontSize={18} className="text-gray-3" />
+                    <X fontSize={18} className="text-gray-800" />
                 </DialogPrimitive.Close>
             </DialogPrimitive.Content>
         </DialogPrimitive.Portal>
