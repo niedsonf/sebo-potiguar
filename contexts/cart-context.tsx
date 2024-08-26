@@ -1,7 +1,7 @@
 'use client'
 
 import { Book } from "@/@types/book";
-import { addToCartAction, removeFromCartAction } from "@/reducers/cart/actions";
+import { addToCartAction, clearCartAction, removeFromCartAction } from "@/reducers/cart/actions";
 import { CartReducer, CartState } from "@/reducers/cart/reducer";
 import { useCallback, useEffect, useLayoutEffect, useReducer } from "react";
 import { createContext } from "use-context-selector";
@@ -9,6 +9,7 @@ import { createContext } from "use-context-selector";
 interface CartContextType extends CartState {
     addToCart: (product: Book) => void;
     removeFromCart: (productId: number) => void;
+    clearCart: () => void;
 }
 
 export const CartContext = createContext({} as CartContextType)
@@ -41,9 +42,13 @@ export function CartContextProvider({ children }: { children: React.ReactNode })
         dispatch(removeFromCartAction(productId))
     }, [])
 
+    const clearCart = useCallback(() => {
+        dispatch(clearCartAction())
+    }, [])
+
     return (
         <CartContext.Provider
-            value={{ ...state, addToCart, removeFromCart }}>
+            value={{ ...state, addToCart, removeFromCart, clearCart }}>
             {children}
         </CartContext.Provider>
     )

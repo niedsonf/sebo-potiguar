@@ -10,7 +10,7 @@ export const DialogBody = ({
 }: HTMLAttributes<HTMLDivElement>) => (
     <div
         className={cn(
-            "bg-gray-7 px-6 py-6 flex overflow-y-auto",
+            "bg-inherit px-6 py-6 flex overflow-y-auto",
             className
         )}
         {...rest}

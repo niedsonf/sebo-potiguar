@@ -10,7 +10,7 @@ export const DialogHeader = ({
 }: HTMLAttributes<HTMLDivElement>) => (
     <div
         className={cn(
-            "bg-gray-7 px-6 pt-6 flex",
+            "bg-inherit px-6 pt-6 flex",
             className
         )}
         {...rest}

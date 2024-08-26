@@ -240,5 +240,4 @@ export const Books: Book[] = [
         rating: "Usado",
         seller: "Afonso",
     },
-    
 ]

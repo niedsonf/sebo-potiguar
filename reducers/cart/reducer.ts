@@ -16,6 +16,10 @@ export function CartReducer(state: CartState, action: any) {
             return produce(state, draft => {
                 draft.products = draft.products.filter(product => product.id !== action.payload)
             })
+        case CartActionTypes.CLEAR_CART:
+            return produce(state, draft => {
+                draft.products = []
+            })
         default:
             return state;
     }
