@@ -18,7 +18,7 @@ export function UserStatus() {
                     height={40}
                     className="rounded-full bg-gray-7/50"
                 />
-                <h4 className="text-sm text-gray-7 font-[500] max-xl:hidden">
+                <h4 className="text-sm text-gray-7 font-[500] max-lg:hidden">
                     <span className="block text-xs font-[400]">Olá, </span>
                     {session?.data?.user?.name}
                 </h4>

@@ -23,7 +23,7 @@ export function Header() {
                 "max-xl:gap-4 max-xl:px-4 max-xl:py-2 max-xl:justify-between"
             )}>
                 <SideMenuDialog>
-                    <button className="max-xl:flex hidden text-gray-6">
+                    <button className="max-lg:flex hidden text-gray-6">
                         <List size={24} />
                     </button>
                 </SideMenuDialog>
@@ -32,7 +32,7 @@ export function Header() {
                 </Link>
                 <UserStatus />
                 <div className="h-full w-[1px] bg-green-700 max-xl:hidden flex" />
-                <BookSearcher className="max-xl:hidden" />
+                <BookSearcher className="max-lg:hidden" />
                 <CartDialog>
                     <button className="relative justify-self-center xl:ml-auto">
                         {

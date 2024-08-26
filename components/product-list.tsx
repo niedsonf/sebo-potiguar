@@ -11,9 +11,10 @@ import { useContextSelector } from "use-context-selector";
 
 export function ProductList() {
     const page = useContextSelector(StoreContext, ctx => ctx.page);
+    const search = useContextSelector(StoreContext, ctx => ctx.search);
 
     gsap.registerPlugin(ScrollTrigger);
-    useGSAP((ctx, ctxSafe) => {
+    useGSAP(() => {
         gsap.fromTo("#product-list > div", {
             opacity: 0,
             scale: 0.5
@@ -30,19 +31,23 @@ export function ProductList() {
     }, [page]);
 
     return (
-        <ul
-            id="product-list"
-            className={cn(
-                "w-full max-w-7xl mx-auto max-xl:px-6",
-                "grid gap-6 grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 "
-            )}>
-            {
-                Books
-                    .slice((page - 1) * 9, page * 9)
-                    .map(book => (
-                        <ProductCard key={book.id} book={book} />
-                    ))
-            }
-        </ul>
+        Books
+            .filter(book => book.title.toLowerCase().includes(search.toLowerCase())).length === 0
+            ? <h1 className="text-xl text-gray-800 my-auto">Não encontramos nenhum livro com esse filtro :(</h1>
+            : <ul
+                id="product-list"
+                className={cn(
+                    "w-full max-w-7xl mx-auto max-xl:px-6",
+                    "grid gap-6 grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 "
+                )}>
+                {
+                    Books
+                        .filter(book => book.title.toLowerCase().includes(search.toLowerCase()))
+                        .slice((page - 1) * 9, page * 9)
+                        .map(book => (
+                            <ProductCard key={book.id} book={book} />
+                        ))
+                }
+            </ul>
     );
 }

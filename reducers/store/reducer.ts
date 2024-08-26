@@ -11,7 +11,8 @@ export function StoreReducer(state: StoreState, action: any) {
     switch (action.type) {
         case StoreActionTypes.PAGE_CHANGE:
             return produce(state, draft => {
-                draft.page = action.payload
+                draft.page = action.payload.page
+                draft.maxPage = action.payload.maxPage
             })
         case StoreActionTypes.SEARCH:
             return produce(state, draft => {

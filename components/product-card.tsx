@@ -34,7 +34,7 @@ export function ProductCard({ book }: ProductCardProps) {
             </ProductPreviewDialog>
             <div className="flex flex-col gap-4 justify-between grow">
                 <div className="flex flex-col gap-2">
-                    <h3 className="text-lg text-green-500 font-[500] leading-6">
+                    <h3 className="text-base text-green-500 font-[500] leading-5 text-ellipsis line-clamp-2">
                         {book.title}
                     </h3>
                     <div className="flex flex-col gap-1 text-gray-800 text-xs">

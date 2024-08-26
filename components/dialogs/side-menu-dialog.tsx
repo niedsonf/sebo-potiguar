@@ -24,24 +24,6 @@ export function SideMenuDialog({ children }: { children: React.ReactNode }) {
                 </Dialog.Header>
                 <Dialog.Body className="flex-col">
                     <BookSearcher className="mx-auto" />
-                    <div className="flex flex-col gap-2 opacity-50 pointer-events-none">
-                        <span className="text-xs text-gray-6 pl-1">Ou busque por tipo (Em breve...)</span>
-                        <nav className={cn(
-                            "flex flex-col h-full overflow-hidden",
-                            "border border-gray-6 rounded",
-                            "[&_a:not(:last-child)]:border-b"
-                        )}>
-                            <Link href="" className="header-navigation-link">
-                                Acadêmicos
-                            </Link>
-                            <Link href="" className="header-navigation-link">
-                                Literários
-                            </Link>
-                            <Link href="" className="header-navigation-link">
-                                Mangás
-                            </Link>
-                        </nav>
-                    </div>
                 </Dialog.Body>
             </Dialog.Content>
         </Dialog.Root>
