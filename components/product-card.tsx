@@ -23,9 +23,13 @@ export function ProductCard({ book }: ProductCardProps) {
         <Card className="bg-gray-200 gap-6">
             <ProductPreviewDialog product={book}>
                 <Image
+                    priority
+                    loading="eager"
                     src={book.image}
                     alt={book.title}
-                    className="max-xl:w-24 w-[125px] object-contain cursor-pointer rounded"
+                    height={180}
+                    width={200}
+                    className="max-xl:max-w-24 max-w-[125px] max-h-[180px] h-auto aspect-auto object-contain cursor-pointer rounded"
                 />
             </ProductPreviewDialog>
             <div className="flex flex-col gap-4 justify-between grow">
