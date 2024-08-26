@@ -2,6 +2,7 @@
 
 import NonSSR from "@/components/non-ssr";
 import { CartContextProvider } from "@/contexts/cart-context";
+import { StoreContextProvider } from "@/contexts/store-context";
 import { SessionProvider } from "next-auth/react";
 
 type ProviderProps = {
@@ -12,9 +13,11 @@ export default function Provider({ children }: ProviderProps) {
     return (
         <NonSSR>
             <SessionProvider>
-                <CartContextProvider>
-                    {children}
-                </CartContextProvider>
+                <StoreContextProvider>
+                    <CartContextProvider>
+                        {children}
+                    </CartContextProvider>
+                </StoreContextProvider>
             </SessionProvider>
         </NonSSR>
     )

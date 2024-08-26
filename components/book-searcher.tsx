@@ -1,6 +1,6 @@
 import { cn } from "@/utils/cn";
 import clsx from "clsx";
-import { Search } from "lucide-react";
+import { MagnifyingGlass } from "phosphor-react";
 import { HTMLAttributes } from "react";
 
 interface BookSearcherProps extends HTMLAttributes<HTMLDivElement> { }
@@ -25,7 +25,7 @@ export function BookSearcher({ className, ...props }: BookSearcherProps) {
                 "absolute grid place-items-center h-full right-0",
                 "text-gray-6 bg-green-300 w-10 rounded-r"
             )} >
-                <Search size={16} />
+                <MagnifyingGlass size={16} />
             </button>
         </div>
     )

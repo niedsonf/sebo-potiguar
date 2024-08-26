@@ -1,30 +1,24 @@
-import { Footer } from "@/components/footer";
+import Provider from "../provider";
 import { Header } from "@/components/header";
-import { getServerSession } from "next-auth";
-import { redirect } from "next/navigation";
+import { Footer } from "@/components/footer";
 
-export default async function HomeLayout({
+export default function HomeLayout({
     children
 }: Readonly<{
     children: React.ReactNode;
 }>) {
-
-    const session = await getServerSession()
-
-    if(!session) {
-        redirect("/login")
-    }
-
     return (
-        <div className="min-h-screen h-full flex flex-col">
-            <Header />
-            <div className="grow flex flex-col">
-                <main
-                    className="grow bg-gray-100">
-                    {children}
-                </main>
-                <Footer />
+        <Provider>
+            <div className="min-h-screen h-full flex flex-col">
+                <Header />
+                <div className="grow flex flex-col">
+                    <main
+                        className="grow bg-gray-100 flex">
+                        {children}
+                    </main>
+                    <Footer />
+                </div>
             </div>
-        </div>
+        </Provider>
     )
 }

@@ -3,6 +3,7 @@ import { Book } from "@/@types/book";
 export enum CartActionTypes {
     ADD_TO_CART = 'ADD_TO_CART',
     REMOVE_FROM_CART = 'REMOVE_FROM_CART',
+    CLEAR_CART = 'CLEAR_CART'
 }
 
 export function addToCartAction(product: Book) {
@@ -16,5 +17,11 @@ export function removeFromCartAction(id: number) {
     return {
         type: CartActionTypes.REMOVE_FROM_CART,
         payload: id
+    }
+}
+
+export function clearCartAction() {
+    return {
+        type: CartActionTypes.CLEAR_CART
     }
 }

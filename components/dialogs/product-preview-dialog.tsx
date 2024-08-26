@@ -18,7 +18,7 @@ export function ProductPreviewDialog({ children, product }: ProductPreviewDialog
             <Dialog.Trigger asChild>
                 {children}
             </Dialog.Trigger>
-            <Dialog.Content>
+            <Dialog.Content className="[&_button:last-child]:text-gray-800">
                 <Dialog.Header>
                     <Dialog.Title className="text-green-500 text-lg max-w-[400px]">{product.title}</Dialog.Title>
                 </Dialog.Header>

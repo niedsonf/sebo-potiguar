@@ -3,8 +3,7 @@
 import { ComponentPropsWithoutRef, ElementRef, forwardRef, useState } from "react"
 import * as DialogPrimitive from "@radix-ui/react-dialog";
 import { cn } from "@/utils/cn";
-import { X } from "lucide-react";
-
+import { X } from "phosphor-react";
 
 interface DialogContentProps extends ComponentPropsWithoutRef<typeof DialogPrimitive.Content> {
     animationIn?: string;
@@ -50,9 +49,9 @@ export const DialogContent = forwardRef<
                 {children}
                 <DialogPrimitive.Close
                     onClick={triggerDispose}
-                    className="absolute right-6 top-6 grid place-items-center"
+                    className="absolute right-6 top-6 grid place-items-center text-gray-7"
                 >
-                    <X fontSize={18} className="text-gray-7" />
+                    <X fontSize={18} />
                 </DialogPrimitive.Close>
             </DialogPrimitive.Content>
         </DialogPrimitive.Portal>

@@ -8,7 +8,7 @@ import Link from "next/link"
 import { cn } from "@/utils/cn"
 
 export function CartDialog({ children }: { children: React.ReactNode }) {
-    const { products, removeFromCart } = useContextSelector(CartContext, ctx => ctx);
+    const { products, removeFromCart, clearCart } = useContextSelector(CartContext, ctx => ctx);
 
     return (
         <Dialog.Root>
@@ -46,23 +46,33 @@ export function CartDialog({ children }: { children: React.ReactNode }) {
                             }
                         </div>
                     </div>
-                    <Link
+                    <div
                         aria-disabled={products.length === 0}
-                        href={
-                            `https://wa.me/558496060709?text=${encodeURIComponent(
-                                `Olá, Afonso.
+                        className="flex flex-col gap-6 aria-[disabled=true]:hidden">
+                        <button
+                            onClick={() => clearCart()}
+                            className={cn(
+                                "bg-red-300 rounded text-base py-1 text-center",
+                                "hover:bg-red-500 transition-colors",
+                            )}>
+                            Limpar carrinho
+                        </button>
+                        <Link
+                            href={
+                                `https://wa.me/558496060709?text=${encodeURIComponent(
+                                    `Olá, Afonso.
 Gostaria de comprar o(s) livro(s):
 ${products.map(product => `*${product.title}*`).join("\n")}`
-                            )}`
-                        }
-                        target="_blank"
-                        className={cn(
-                            "rounded border border-gray-6 text-base py-1 text-center",
-                            "hover:bg-gray-6 hover:text-green-500 transition-colors",
-                            "aria-[disabled=true]:hidden block"
-                        )}>
-                        Solicitar orçamento
-                    </Link>
+                                )}`
+                            }
+                            target="_blank"
+                            className={cn(
+                                "bg-green-300 rounded text-base py-1 text-center",
+                                "hover:bg-green-700 hover:text-gray-6 transition-colors",
+                            )}>
+                            Solicitar orçamento
+                        </Link>
+                    </div>
                 </Dialog.Body>
             </Dialog.Content>
         </Dialog.Root>
