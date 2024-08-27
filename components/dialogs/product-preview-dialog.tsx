@@ -24,9 +24,11 @@ export function ProductPreviewDialog({ children, product }: ProductPreviewDialog
                 </Dialog.Header>
                 <Dialog.Body>
                     <Image
+                        loading="eager"
                         src={product.image}
                         alt={product.title}
-                        className="object-contain w-[400px] rounded"
+                        width={400}
+                        className="object-contain rounded h-auto"
                     />
                 </Dialog.Body>
             </Dialog.Content>
