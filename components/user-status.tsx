@@ -8,6 +8,8 @@ import Image from "next/image";
 export function UserStatus() {
     const session = useSession()
 
+    console.log(session)
+
     if (session?.status === 'loading') {
         return (
             <div className="flex items-center gap-2">
