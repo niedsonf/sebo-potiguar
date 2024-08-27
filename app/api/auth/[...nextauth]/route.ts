@@ -3,7 +3,7 @@ import GoogleProvider from "next-auth/providers/google";
 import { FirestoreAdapter } from "@next-auth/firebase-adapter";
 
 const handler = NextAuth({
-  adapter: FirestoreAdapter(),
+  // adapter: FirestoreAdapter(),
   providers: [
     GoogleProvider({
       clientId: process.env.GOOGLE_CLIENT_ID!,
