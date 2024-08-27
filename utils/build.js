@@ -1,7 +1,7 @@
 import fs from 'fs';
 import dotenv from 'dotenv/config';
 
-fs.writeFileSync('credentials.json', JSON.stringify({
+fs.writeFileSync('.next/credentials.json', JSON.stringify({
     type: process.env.type,
     project_id: process.env.project_id,
     private_key_id: process.env.private_key_id,
@@ -14,3 +14,5 @@ fs.writeFileSync('credentials.json', JSON.stringify({
     client_x509_cert_url: process.env.client_x509_cert_url,
     universe_domain: process.env.universe_domain,
 }));
+
+console.log('Credentials file created successfully');
