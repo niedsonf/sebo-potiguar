@@ -17,28 +17,28 @@ import firestore from "@/utils/firestore";
 export function Header() {
     const { products } = useContextSelector(CartContext, ctx => ctx);
 
-    async function handleFirestore() {
+    // async function handleFirestore() {
        
-        const col = collection(firestore, "users");
-        const newDoc = await addDoc(col, { "nome": "niedson" })
-        console.log(col)
-        console.log(newDoc)
+    //     const col = collection(firestore, "users");
+    //     const newDoc = await addDoc(col, { "nome": "niedson" })
+    //     console.log(col)
+    //     console.log(newDoc)
 
-        const querySnapshot = await getDocs(col);
-        console.log(querySnapshot)
-
-
-        const t = querySnapshot.docs.map(doc => doc.data());
-        console.log(t)
+    //     const querySnapshot = await getDocs(col);
+    //     console.log(querySnapshot)
 
 
-        const productsCollection = doc(firestore, "users", "P4pDYc2k9pf9eueW8pCE");
-        console.log(productsCollection);
-    }
+    //     const t = querySnapshot.docs.map(doc => doc.data());
+    //     console.log(t)
+
+
+    //     const productsCollection = doc(firestore, "users", "P4pDYc2k9pf9eueW8pCE");
+    //     console.log(productsCollection);
+    // }
 
     return (
         <header className="flex justify-center border-b-4 border-green-700 bg-green-500 sticky top-0 z-10">
-            <button onClick={() => handleFirestore()}>clica aqui</button>
+            {/* <button onClick={() => handleFirestore()}>clica aqui</button> */}
             <div className={clsx(
                 "flex gap-12 items-center",
                 "max-w-7xl w-full py-4",
