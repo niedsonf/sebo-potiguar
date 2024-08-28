@@ -3,6 +3,7 @@
 import { StoreContext } from "@/contexts/store-context";
 import { cn } from "@/utils/cn";
 import clsx from "clsx";
+import { useRouter } from "next/navigation";
 import { MagnifyingGlass } from "phosphor-react";
 import { HTMLAttributes } from "react";
 import { useContextSelector } from "use-context-selector";
@@ -13,9 +14,14 @@ export function BookSearcher({ className, ...props }: BookSearcherProps) {
     const search = useContextSelector(StoreContext, ctx => ctx.search);
     const storeSearch = useContextSelector(StoreContext, ctx => ctx.storeSearch);
 
+    const router = useRouter();
+
     return (
         <form
-            onSubmit={(e) => e.preventDefault()}
+            onSubmit={(e) => {
+                e.preventDefault();
+                router.push('/');
+            }}
             className={cn(
                 "relative flex w-fit",
                 className

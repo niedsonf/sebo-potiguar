@@ -14,7 +14,10 @@ export function ProductListPagination() {
                 Array.from({ length: maxPage }, (_, i) => i + 1).map((i) => (
                     <button
                         key={i}
-                        onClick={() => storePageChange(i, maxPage)}
+                        onClick={() => {
+                            storePageChange(i, maxPage)
+                            window.scrollTo({top: 0, behavior: 'smooth'})
+                        }}
                         className={`w-8 h-8 rounded text-white ${i === page ? 'bg-green-500 ' : 'bg-green-500/30'}`}>
                         {i}
                     </button>
